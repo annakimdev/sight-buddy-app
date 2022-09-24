@@ -13,6 +13,14 @@ const DeckSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  grade: {
+    type: String,
+    required: true,
+  },
+  words: {
+    type: Array,
+    require: true,
+  },
   likes: {
     type: Number,
     required: true,

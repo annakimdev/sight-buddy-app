@@ -33,6 +33,8 @@ module.exports = {
         title: req.body.title,
         image: result.secure_url,
         cloudinaryId: result.public_id,
+        grade: req.body.gradeLevel,
+        words: req.body.words.split(","),
         likes: 0,
         user: req.user.id,
       });

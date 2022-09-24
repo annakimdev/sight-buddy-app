@@ -1,0 +1,36 @@
+<%- include('partials/header') -%>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+          <div>
+              <p><strong>User Name</strong>: <%= user.userName %></p>
+              <p><strong>Email</strong>: <%= user.email %></p>
+              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+          </div>
+          <div class="mt-5">
+            <h2>Add a deck</h2>
+            <form action="/deck/createDeck" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="title" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="gradeLevel" class="form-label">Grade level</label>
+                <textarea class="form-control" id="gradeLevel" name="gradeLevel"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="words" class="form-label">Words (separated by comma)</label>
+                <textarea class="form-control" id="words" name="words"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="imgUpload" class="form-label">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') -%>
