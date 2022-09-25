@@ -3,23 +3,23 @@ const mongoose = require("mongoose");
 const DeckSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true,
+    // required: true,
   },
-  image: {
-    type: String,
-    require: true,
-  },
-  cloudinaryId: {
-    type: String,
-    require: true,
-  },
+  // image: {
+  //   type: String,
+  //   require: true,
+  // },
+  // cloudinaryId: {
+  //   type: String,
+  //   require: true,
+  // },
   grade: {
     type: String,
-    required: true,
+    // required: true,
   },
   words: {
-    type: Array,
-    require: true,
+    type: String,
+    // required: true,
   },
   likes: {
     type: Number,

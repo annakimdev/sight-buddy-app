@@ -27,7 +27,7 @@
 
     <!-- 9-22  Next To Do: Display each word randomly -->
     <div class="col-3 mt-5">
-      <p><%= deck.words[0] %></p>
+      <p><%= deck.words[getRandomIndex(deck.words)] %></p>
     </div>
 
     <!-- 9/24 Added word. Next To Do: Add Math.random logic to display random word. Add speech API. -->
@@ -38,5 +38,7 @@
     </div>
   </div>
 </div>
+
+<script src="js/main.js" type="module"></script>
 
 <%- include('partials/footer') -%>
