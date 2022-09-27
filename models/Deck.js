@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const DeckSchema = new mongoose.Schema({
   title: {
     type: String,
-    // required: true,
+    required: true,
   },
   // image: {
   //   type: String,
@@ -15,12 +15,12 @@ const DeckSchema = new mongoose.Schema({
   // },
   grade: {
     type: String,
-    // required: true,
+    required: true,
   },
-  words: {
+  words: [{
     type: String,
-    // required: true,
-  },
+    required: true,
+  }],
   likes: {
     type: Number,
     required: true,

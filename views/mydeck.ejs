@@ -4,8 +4,9 @@
       <ul class="row list-unstyled">
         <% for(var i=0; i<decks.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
-            <a href="/deck/<%= decks[i]._id%>">
-              <img class="img-fluid" src="<%= decks[i].image%>">
+            
+            <a href="/deck/<%= decks[i]._id%>"><p><%= decks[i].title%></p>
+              <!-- <img class="img-fluid" src="<%= decks[i].image%>"> -->
             </a>
           </li>
         <% } %>

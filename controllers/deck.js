@@ -5,8 +5,11 @@ const User = require("../models/User");
 module.exports = {
   getMyDeck: async (req, res) => {
     try {
+      console.log(req.user.id)
       const decks = await Deck.find({ user: req.user.id });
+      console.log(decks)
       res.render("mydeck.ejs", { decks: decks, user: req.user });
+      
     } catch (err) {
       console.log(err);
     }
@@ -21,6 +24,7 @@ module.exports = {
   },
   getDeck: async (req, res) => {
     try {
+        console.log(req.params.id)
         const deck = await Deck.findById(req.params.id);
         res.render("deck.ejs", { deck: deck, user: req.user });
     } catch (err) {
@@ -43,10 +47,11 @@ module.exports = {
         // image: result.secure_url,
         // cloudinaryId: result.public_id,
         grade: req.body.grade,
-        words: req.body.words,
+        words: req.body.words.split(', '),
         likes: 0,
         user: req.user.id,
       });
+      console.log(req.body);
       console.log("Deck has been added!");
       res.redirect("/deck");
     } catch (err) {

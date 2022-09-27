@@ -3,7 +3,7 @@
   <div class="row justify-content-center mt-5">
     <div class="col-6">
       <h2><%= deck.title %></h2>
-      <img class="img-fluid" src="<%= deck.image%>" />
+      <!-- <img class="img-fluid" src="<%= deck.image%>" /> -->
       <div class="row justify-content-between">
         <form
           class="col-1"
@@ -27,18 +27,22 @@
 
     <!-- 9-22  Next To Do: Display each word randomly -->
     <div class="col-3 mt-5">
-      <p><%= deck.words[getRandomIndex(deck.words)] %></p>
+      <p id="randomDisplay"></p>
+      <p class="hidden deckArray"><%= deck.words %></p>
+      <button id="next">Next</button>
     </div>
 
     <!-- 9/24 Added word. Next To Do: Add Math.random logic to display random word. Add speech API. -->
 
+    <!-- 9/26 Added random word logic. Next To Do: Add speech API and beautify MVP. -->
+
     <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/feed">Return to Feed</a>
+      <a class="btn btn-primary" href="/deck">My Decks</a>
+      <a class="btn btn-primary" href="/addDeck">Add Deck</a>
     </div>
   </div>
 </div>
 
-<script src="js/main.js" type="module"></script>
+<script src="/js/main.js"></script>
 
 <%- include('partials/footer') -%>
