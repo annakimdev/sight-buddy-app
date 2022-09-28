@@ -5,6 +5,10 @@ const DeckSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  type: {
+    type: Boolean,
+    required: true,
+  },
   // image: {
   //   type: String,
   //   require: true,

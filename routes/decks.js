@@ -9,7 +9,7 @@ router.get("/", ensureAuth, deckController.getMyDeck);
 
 router.get("/:id", ensureAuth, deckController.getDeck);
 
-router.get("/explore", deckController.getExplore);
+// router.get("/explore", deckController.getExplore);
 
 // router.post("/createDeck", upload.single("file"), deckController.createDeck);
 router.post("/createDeck", deckController.createDeck);

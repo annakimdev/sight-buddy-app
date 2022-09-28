@@ -1,3 +1,4 @@
+<%- include('partials/navbar') -%>
 <%- include('partials/header') -%>
 <div class="container">
   <div class="row mt-5">
@@ -10,6 +11,7 @@
           <div class="mt-5">
             <h2>Add a deck</h2>
             <form action="/deck/createDeck" enctype="application/json" method="POST">
+            <!-- <form action="/deck/createDeck" enctype="multipart/form-data" method="POST"> -->
               <div class="mb-3">
                   <label for="title" class="form-label">Title</label>
                   <input type="text" class="form-control" id="title" name="title">
@@ -17,10 +19,6 @@
               <div class="mb-3">
                 <label for="grade" class="form-label">Grade</label>
                 <textarea class="form-control" id="grade" name="grade"></textarea>
-                <!-- <select class="form-select" arai-label="Default select example" id="grade" name="grade"></select>
-                  <option selected>Select Grade</option>
-                  <option value="PreK">Pre-K</option>
-                  <option value="Kindergarten">Kindergarten</option> -->
               </div>
               <div class="mb-3">
                 <label for="words" class="form-label">Words</label>
@@ -28,7 +26,7 @@
               </div>
               <!-- <div class="mb-3">
                 <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
+                <input type="file" id="imgUpload" name="file">
               </div> -->
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>
