@@ -17,7 +17,7 @@ module.exports = {
   getExplore: async (req, res) => {
     try {
         // const decks = await Deck.find().sort({ createdAt: "desc" }).lean();
-        const decks = await Deck.find( { "type": false });
+        const decks = await Deck.find( { type: false });
         console.log(decks);
         res.render("explore.ejs", { decks: decks });
     } catch (error) {
