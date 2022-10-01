@@ -19,7 +19,7 @@ module.exports = {
         // const decks = await Deck.find().sort({ createdAt: "desc" }).lean();
         const decks = await Deck.find( { type: false });
         console.log(decks);
-        res.render("explore.ejs", { decks: decks });
+        res.render("explore.ejs", { decks: decks, user: req.user });
     } catch (error) {
         console.log(err);
     }
@@ -38,7 +38,7 @@ module.exports = {
     try {
         const dolchDeck = await Deck.find( { "type": true });
         console.log(dolchDeck);
-        res.render("dolchDeck.ejs", { dolchDeck: dolchDeck });
+        res.render("dolchDeck.ejs", { dolchDeck: dolchDeck, user: req.user });
     } catch (err) {
       console.log(err);
     }
