@@ -1,8 +1,10 @@
 <%- include('partials/header') -%>
+<%- include('partials/rootNavbar') -%>
 
-<main class="container">
+<main class="container card-container">
   <div class="row justify-content-center">
     <section class="col-6 mt-5">
+      <h1>Log in to your account</h1>
       <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
       <div class="alert alert-danger"><%= el.msg %></div>
       <% }) %> <% } %> <% if (locals.messages.info) { %> <%
@@ -31,7 +33,9 @@
             name="password"
           />
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <span>Don't have an account?</span>
+        <a href="/signup">Sign Up</a>
       </form>
     </section>
   </div>
