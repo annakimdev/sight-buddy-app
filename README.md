@@ -1,9 +1,9 @@
 # Sightly
-Sightly is an educational website for multi-lingual Preschoolders to learn high frequency words by sight and sound. Backend with authentication allows parents to login and create a custom list of numbers for their children.
+Sightly is an educational website for multi-lingual Preschoolders to learn high frequency words by sight and sound. Backend with authentication allows parents to login and create a custom list of words for their children.
 
 **Link to project:** TBD
 
-![alt tag](https://i.ibb.co/6H0Y0n5/sightly-demo.gif)
+![alt tag](https://i.ibb.co/ng9t152/sightly-home.png)
 
 ## How It's Made:
 
