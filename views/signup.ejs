@@ -4,7 +4,7 @@
     <main class="container card-container">
         <div class="row justify-content-center">
             <section class="col-6 mt-5">
-              <h1>Sign up with email</h1>
+              <h1>Create your account</h1>
                 <% if (locals.messages.errors) { %>
                     <% messages.errors.forEach( el => { %>
                         <div class="alert alert-danger"><%= el.msg %></div>
@@ -22,8 +22,9 @@
                       </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
                       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                      
                     </div>
                     <div class="mb-3">
                       <label for="password" class="form-label">Password</label>
@@ -33,7 +34,7 @@
                         <label for="confirmPassword" class="form-label">Confirm Password</label>
                         <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
                       </div>
-                    <button type="submit" class="btn btn-primary">Create Account</button>
+                    <button type="submit" class="btn btn-info">Sign up</button>
                     <span>Have an account?</span>
                     <a href="/login">Log in now</a>
                   </form>
@@ -41,4 +42,4 @@
         </div>
     </main>
 
-<%- include('partials/footer') -%>
+<%- include('partials/rootFooter') -%>

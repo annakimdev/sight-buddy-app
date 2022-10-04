@@ -31,6 +31,29 @@ body.dolchDeck .navbar-light .nav-item a.dolchDeck,
 body.explore .navbar-light .nav-item a.explore,
 body.myDeck .navbar-light .nav-item a.myDeck,
 body.addDeck .navbar-light .nav-item a.addDeck {
-    color: #00B159;
+    /* color: #4083be; */
+    text-decoration: underline;
 }
 
+.navbar span,
+.navbar li {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lspacing-1 {
+    letter-spacing: 1px;
+}
